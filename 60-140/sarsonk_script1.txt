@@ -1,0 +1,126 @@
+Script started on Wed 23 Sep 2015 06:23:50 PM EDT
+]0;sarsonk@ltsp-i386-bravo: ~/60-140sarsonk@ltsp-i386-bravo:~/60-140$ cat sarsonk_assn1.txt
+/* CONFIDENTIALITY AGREEMENT & STATEMENT OF HONESTY
+   I confirm that I will keep the content of this assignment/examination
+   confidential.  I confirm that I have not recieved any unauthorized
+   assistnace in preparing for or doing this assignment/examination.
+   I confirm knowing that a mark of 0 may be assigned for copied work.
+   Name:  Kolby Sarson
+   Student Number:  104232327
+   Lecture Section:  01
+   Lab Section:  52
+   Date:  Sept. 23, 2015 */
+
+   {
+	Input Data:
+	x1, x2, x3, x4, x5 (real);
+
+	Output Data:
+	variance, sd (real);
+
+	Other Data:
+	m (real);
+	d1, d2, d3, d4, d5 (real);
+	d1sqr, d2sqr, d3sqr, d4sqr, d5sqr (real);
+	sumOfSqr (real);
+
+	/* Instructions */ 
+	read (x1, x2, x3, x4, x5);
+	m = (x1 + x2 + x3 + x4 + x5) / 5.0;
+	d1 = x1 - m;
+	d2 = x2 - m;
+	d3 = x3 - m;
+	d4 = x4 - m;
+	d5 = x5 - m;
+	d1sqr = d1 * d1;
+	d2sqr = d2 * d2;
+	d3sqr = d3 * d3;
+	d4sqr = d4 * d4;
+	d5sqr = d5 * d5;
+	sumOfSqr = d1sqr + d2sqr + d3sqr + d4sqr + d5sqr;
+	variance = sumOfSqr / 5.0;
+	sd = sqrt (variance);
+	printf ("Score \t - \t Mean Score \t = \t Deviation Score \t Squared Deviation \n");
+	printf ("(X) \t   \t (m) \t  \t \t (sd) \t \t \t (x-m)squared \n");
+	printf ("---------------------------------------------------------------------------- \n");
+	printf ("%f \t %f \t \t %f \t \t %f \n", x1, m, d1, d1sqr);
+	printf ("%f \t %f \t \t %f \t \t %f \n", x2, m, d2, d2sqr);
+	printf ("%f \t %f \t \t %f \t \t %f \n", x3, m, d3, d3sqr);
+	printf ("%f \t %f \t \t %f \t \t %f \n", x4, m, d4, d4sqr);
+	printf ("%f \t %f \t \t %f \t \t %f \n", x5, m, d5, d5sqr);
+    printf ("\t \t \t \t \t \t \t Sum: \t %f \n", sumOfSqr);
+    printf ("Variance = %f/5 = %f \n", sumOfSqr, variance);
+    printf ("Standard Deviation = sd = %f \n", sd);
+    return 0;
+}]0;sarsonk@ltsp-i386-bravo: ~/60-140sarsonk@ltsp-i386-bravo:~/60-140$ cat sr[Karsonk_assn1.c
+/* CONFIDENTIALITY AGREEMENT & STATEMENT OF HONESTY
+   I confirm that I will keep the content of this assignment/examination
+   confidential.  I confirm that I have not recieved any unauthorized
+   assistnace in preparing for or doing this assignment/examination.
+   I confirm knowing that a mark of 0 may be assigned for copied work.
+   Name:  Kolby Sarson
+   Student Number:  104232327
+   Lecture Section:  01
+   Lab Section:  52
+   Date:  Sept. 23, 2015 */
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+	float x1, x2, x3, x4, x5;
+	float variance, sd;
+	float m;
+	float d1, d2, d3, d4, d5;
+	float d1sqr, d2sqr, d3sqr, d4sqr, d5sqr;
+	float sumOfSqr;
+
+	/*  Insturctions  */
+	printf ("Type your 5 numbers \n");
+	scanf ("%f %f %f %f %f", &x1, &x2, &x3, &x4, &x5);
+	m = (x1 + x2 + x3 + x4 + x5) / 5.0;
+	d1 = x1 - m;
+	d2 = x2 - m;
+	d3 = x3 - m;
+	d4 = x4 - m;
+	d5 = x5 - m;
+	d1sqr = d1 * d1;
+	d2sqr = d2 * d2;
+	d3sqr = d3 * d3;
+	d4sqr = d4 * d4;
+	d5sqr = d5 * d5;
+	sumOfSqr = d1sqr + d2sqr + d3sqr + d4sqr + d5sqr;
+	variance = sumOfSqr / 5.0;
+	sd = sqrt (variance);
+	printf ("Score \t - \t Mean Score \t = \t Deviation Score \t Squared Deviation \n");
+	printf ("(X) \t   \t (m) \t  \t \t (sd) \t \t \t (x-m)squared \n");
+	printf ("---------------------------------------------------------------------------- \n");
+	printf ("%f \t %f \t \t %f \t \t %f \n", x1, m, d1, d1sqr);
+	printf ("%f \t %f \t \t %f \t \t %f \n", x2, m, d2, d2sqr);
+	printf ("%f \t %f \t \t %f \t \t %f \n", x3, m, d3, d3sqr);
+	printf ("%f \t %f \t \t %f \t \t %f \n", x4, m, d4, d4sqr);
+	printf ("%f \t %f \t \t %f \t \t %f \n", x5, m, d5, d5sqr);
+    printf ("\t \t \t \t \t \t \t Sum: \t %f \n", sumOfSqr);
+    printf ("Variance = %f/5 = %f \n", sumOfSqr, variance);
+    printf ("Standard Deviation = sd = %f \n", sd);
+	return 0;
+}]0;sarsonk@ltsp-i386-bravo: ~/60-140sarsonk@ltsp-i386-bravo:~/60-140$ cc sarsonk_assn1.c -lm
+]0;sarsonk@ltsp-i386-bravo: ~/60-140sarsonk@ltsp-i386-bravo:~/60-140$ ./a.out
+Type your 5 numbers 
+60 95 73 41 84
+Score 	 - 	 Mean Score 	 = 	 Deviation Score 	 Squared Deviation 
+(X) 	   	 (m) 	  	 	 (sd) 	 	 	 (x-m)squared 
+---------------------------------------------------------------------------- 
+60.000000 	 70.599998 	 	 -10.599998 	 	 112.359970 
+95.000000 	 70.599998 	 	 24.400002 	 	 595.360046 
+73.000000 	 70.599998 	 	 2.400002 	 	 5.760007 
+41.000000 	 70.599998 	 	 -29.599998 	 	 876.159912 
+84.000000 	 70.599998 	 	 13.400002 	 	 179.560043 
+	 	 	 	 	 	 	 Sum: 	 1769.199951 
+Variance = 1769.199951/5 = 353.839996 
+Standard Deviation = sd = 18.810635 
+]0;sarsonk@ltsp-i386-bravo: ~/60-140sarsonk@ltsp-i386-bravo:~/60-140$ exit
+exit
+
+Script done on Wed 23 Sep 2015 06:25:42 PM EDT

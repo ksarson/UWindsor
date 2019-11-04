@@ -1,0 +1,26 @@
+﻿Consider the following C program. Assume that memory addresses are expressed
+in decimal numbers and an integer takes 4 bytes. Also, assume ids = &ids[0] =
+2000. What would be printed by the following program? Do NOT compile and
+execute this program as it will not provide the correct results – do the tracing of the
+program by hand and using only the assumptions stated.
+
+
+#include <stdio.h>
+
+int main()
+{
+	int ids[3] = {100,200,300};
+	int *salary, salary1, salary2, *salary3;
+
+	salary1 = ids[0] * ids[1];  					// salary1 = 100 * 200 = 20000
+	salary = &ids[1] ; 						// salary = 2004
+	salary2 = *(ids+1)* *(ids+2);					// salary2 = 200 * 300 = 60000
+	salary3 = ids+2;						// salary3 = 2008
+
+	printf("*salary = %d\nsalary1 = %d\n", *salary, salary1);	// Salary = 2004	Salary1 = 20000
+	printf("salary2 = %d\nsalary3 = %p\n", salary2, salary3);	// Salary2 = 60000	Salary3 = 2008
+
+	return 0 ;
+}
+
+

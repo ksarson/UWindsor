@@ -1,0 +1,27 @@
+Script started on Wed 27 Jan 2016 04:09:16 PM EST
+]0;sarsonk@ltsp-i386-bravo: ~/cs141sarsonk@ltsp-i386-bravo:~/cs141$ cc assign1.c
+]0;sarsonk@ltsp-i386-bravo: ~/cs141sarsonk@ltsp-i386-bravo:~/cs141$ cc assign1.c[5P./a.outcc assign1.c[5P./a.out
+Please enter the number of inputs you desire followed by
+the input integers on the next line separated by spaces:
+6
+24 1 4358 754 305 794
+81 18 6714 792 891 792 
+4176
+]0;sarsonk@ltsp-i386-bravo: ~/cs141sarsonk@ltsp-i386-bravo:~/cs141$ ./a.out
+Please enter the number of inputs you desire followed by
+the input integers on the next line separated by spaces:
+3
+123 456 789
+891 891 891 
+198
+]0;sarsonk@ltsp-i386-bravo: ~/cs141sarsonk@ltsp-i386-bravo:~/cs141$ ./a.out
+Please enter the number of inputs you desire followed by
+the input integers on the next line separated by spaces:
+4
+234 578 5 6984
+891 792 297 8802 
+2088
+]0;sarsonk@ltsp-i386-bravo: ~/cs141sarsonk@ltsp-i386-bravo:~/cs141$ exit
+exit
+
+Script done on Wed 27 Jan 2016 04:10:51 PM EST
