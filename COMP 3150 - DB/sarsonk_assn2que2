@@ -1,0 +1,56 @@
+Script started on Sun 10 Feb 2019 07:43:06 PM EST
+]0;sarsonk@alpha: ~[01;32msarsonk@alpha[00m:[01;34m~[00m$ exitsqlplus sarsonk
+
+SQL*Plus: Release 12.1.0.2.0 Production on Sun Feb 10 19:43:09 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter password: [KEnter password: [K[KEnter password: [KEnter password: *[KEnter password: **[KEnter password: ***[KEnter password: ****[KEnter password: *****[KEnter password: ******[KEnter password: *******[KEnter password: ********[KEnter password: *********[KEnter password: **********[KEnter password: **********[KEnter password: 
+[K
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> [KSQL> [KSQL> exitSelect * FROM subscribeto;phonecompany;[4Pcustomer;[C[C[C[C[C;[KSelect * FROM cat;[1P[1P[1P[1P[1P[1@E[1@L[1@E[1@C[1@T[KSELECT * FROM cat;
+
+TABLE_NAME		       TABLE_TYPE
+------------------------------ -----------
+SUBSCRIBETO		       TABLE
+PHONECOMPANY		       TABLE
+CUSTOMER		       TABLE
+
+SQL> [KSQL> [KSQL> SELECT * FROM cat;[C[C[C[C[Cexit[KSelect * FROM subscribeto;phonecompany;[4Pcustomer;[1Pustomer;Customer;[1P[1P[1P[1P[1P[1@E[1@L[1@E[1@C[1@T[KSELECT * FROM Customer;
+
+       SSN CNAME	   CADDRESS				  BALANCE
+---------- --------------- ----------------------------------- ----------
+     10111 John Smith	   2 Sunset Avenue, Windsor		     56.6
+	 1 Kolby	   Riverside Dr.			      100
+	 2 John 	   Wyandotte St.			       50
+	 3 Rick 	   University Ave.			       75
+	 4 Sarah	   College Ave. 			      200
+
+SQL> [KSQL> [KSQL> SELECT * FROM Customer;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;p;[1P;P;h;o;n;e;C;o;m;p;a;n;y;[C[C[C[C[C[KSELECT * FROM PhoneCompany;
+
+    COMPID CNAME	   CADDRESS			       NUMPRODUCTS
+---------- --------------- ----------------------------------- -----------
+      1000 Telus	   Huron Church Rd.			       125
+      2000 Rogers	   Dominion Rd. 			       158
+      3000 Bell 	   Oulette Ave. 				95
+      4000 Koodoo	   Walker Rd.				       195
+
+SQL> [KSQL> [KSQL> SELECT * FROM PhoneCompany;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;S;S;[1P;u;b;s;c;r;i;b;e;t;o;[C[C[C[C[C[KSELECT * FROM Subscribeto;
+
+       SSN     COMPID PHONETYPE       MONTH		 BILLAMT
+---------- ---------- --------------- --------------- ----------
+	 1	 1000 iPhone XS       Jan.		      75
+	 2	 2000 Pixel 3	      Feb.		      60
+	 3	 3000 Galaxy S9       Mar.		      80
+	 4	 4000 LG G7	      Apr.		      95
+
+SQL> [KSQL> [KSQL> exit[Kexit
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+]0;sarsonk@alpha: ~[01;32msarsonk@alpha[00m:[01;34m~[00m$ exit
+exit
+
+Script done on Sun 10 Feb 2019 07:44:10 PM EST

@@ -1,0 +1,42 @@
+Script started on Sun 10 Mar 2019 10:10:51 PM EDT
+]0;sarsonk@charlie: ~[01;32msarsonk@charlie[00m:[01;34m~[00m$ exitsqlplus sarsonk
+
+SQL*Plus: Release 12.1.0.2.0 Production on Sun Mar 10 22:10:52 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter password: [KEnter password: [K[KEnter password: [KEnter password: *[KEnter password: **[KEnter password: ***[KEnter password: ****[KEnter password: *****[KEnter password: ******[KEnter password: *******[KEnter password: ******[KEnter password: *******[KEnter password: ********[KEnter password: *********[KEnter password: **********[KEnter password: ***********[KEnter password: ***********[KEnter password: 
+[K
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> [KSQL> [KSQL> exitwhere c.aid = A.aid having count(*)=2 group by aid);[C[C[C[C[C[19Pexists(select c.aid from contains[C[C[C[C[Cwhere[Kfrom album A[C[C[C[C[CSelect A.atitle, A.copyrightdate[C[C[C[C[C[KSelect A.atitle, A.copyrightdate
+  2  [K  2  [K  2  Select A.atitle, A.copyrightdate[C[C[C[C[Cexit[Kwhere c.aid = A.aid having count(*)=2 group by aid);[C[C[C[C[C[19Pexists(select c.aid from contains[C[C[C[C[Cwhere[Kfrom album A[C[C[C[C[C[Kfrom album A
+  3  [K  3  [K  3  from album A[C[C[C[C[CSelect A.atitle, A.copyrightdate[C[C[C[C[Cexit[Kwhere c.aid = A.aid having count(*)=2 group by aid);[C[C[C[C[C[19Pexists(select c.aid from contains[C[C[C[C[Cwhere[K[Kwhere
+  4  [K  4  [K  4  wherefrom album A[C[C[C[C[CSelect A.atitle, A.copyrightdate[C[C[C[C[Cexit[Kwhere c.aid = A.aid having count(*)=2 group by aid);[C[C[C[C[C[19Pexists(select c.aid from contains[C[C[C c[C[C[C[C[C[Kexists(select c.aid from contains c
+  5  [K  5  [K  5  exists(select c.aid from contains c[C[C[C[C[Cwhere[Kfrom album A[C[C[C[C[CSelect A.atitle, A.copyrightdate[C[C[C[C[Cexit[Kwhere c.aid = A.aid having count(*)=2 group by aid);[C[C[C[C[C[Kwhere c.aid = A.aid having count(*)=2 group by aid);
+
+ATITLE		     COPYRIGHT
+-------------------- ---------
+Recovery	     08-JUN-04
+
+SQL> [KSQL> [KSQL> Select[K[K[K[K[K[Kwhere c.aid = A.aid having count(*)=2 group by aid);[C[C[C[C[C[17Pexists(select c.aid from contains c[C[C[C[C[Cwhere[Kfrom album A[C[C[C[C[CSelect A.atitle, A.copyrightdate[C[C[C[C[Cexit[KSelect A.atitle, A.copyrightdate[C[C[C[C[C[KSelect A.atitle, A.copyrightdate
+  2  [K  2  [K  2  Select A.atitle, A.copyrightdate[C[C[C[C[Cwhere c.aid = A.aid having count(*)=2 group by aid);[C[C[C[C[C[17Pexists(select c.aid from contains c[C[C[C[C[Cwhere[Kfrom album A[C[C[C[C[CSelect A.atitle, A.copyrightdate[C[C[C[C[C[20Pfrom album A[C[C[C[C[C[Kfrom album A
+  3  [K  3  [K  3  from album A[C[C[C[C[CSelect A.atitle, A.copyrightdate[C[C[C[C[Cwhere c.aid = A.aid having count(*)=2 group by aid);[C[C[C[C[C[17Pexists(select c.aid from contains c[C[C[C[C[Cwhere[K NOT[C[C[C[C[C[Kwhere NOT
+  4  [K  4  [K  4  where NOT[C[C[C[C[Cfrom album A[C[C[C[C[CSelect A.atitle, A.copyrightdate[C[C[C[C[Cwhere c.aid = A.aid having count(*)=2 group by aid);[C[C[C[C[C[17Pexists(select c.aid from contains c[C[C[C[C[C[Kexists(select c.aid from contains c
+  5  [K  5  [K  5  exists(select c.aid from contains c[C[C[C[C[Cwhere NOT[K[C[C[C[C[Cfrom album A[C[C[C[C[CSelect A.atitle, A.copyrightdate[C[C[C[C[Cwhere c.aid = A.aid having count(*)=2 group by aid);[C[C[C[C[C[17Pexists(select c.aid from contains c[C[C[C[C[Cwhere[Kfrom album A[C[C[C[C[CSelect A.atitle, A.copyrightdate[C[C[C[C[Cexit[Kwhere c.aid = A.aid having count(*)=2 group by aid);[C[C[C[C[C[Kwhere c.aid = A.aid having count(*)=2 group by aid);
+
+ATITLE		     COPYRIGHT
+-------------------- ---------
+Revival 	     09-SEP-09
+Welcome 	     03-APR-14
+Good Heart	     14-FEB-17
+
+SQL> [KSQL> [KSQL> exit[Kexit
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+]0;sarsonk@charlie: ~[01;32msarsonk@charlie[00m:[01;34m~[00m$ exit
+exit
+
+Script done on Sun 10 Mar 2019 10:12:08 PM EDT

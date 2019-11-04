@@ -1,0 +1,65 @@
+Script started on Sun 10 Mar 2019 09:45:17 PM EDT
+]0;sarsonk@charlie: ~[01;32msarsonk@charlie[00m:[01;34m~[00m$ exitsqlplus sarsonk
+[K
+SQL*Plus: Release 12.1.0.2.0 Production on Sun Mar 10 21:45:19 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter password: [KEnter password: [K[KEnter password: [KEnter password: *[KEnter password: **[KEnter password: ***[KEnter password: ****[KEnter password: *****[KEnter password: ******[KEnter password: *******[KEnter password: ********[KEnter password: *********[KEnter password: **********[KEnter password: ***********[KEnter password: ***********[KEnter password: 
+[K
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> [KSQL> [KSQL> exit@A3Q2e.sqld.sqlc.sqlb.sqla.sql[C[C[C[C[C[K@A3Q2a.sql
+
+MNAME			  PHONE
+-------------------- ----------
+Steven Markel	     2221113332
+
+SQL> [KSQL> [KSQL> @A3Q2a.sql[C[C[C[C[C[6Pexit@A3Q2e.sqld.sqlc.sqlb.sql[C[C[C[C[C[K@A3Q2b.sql
+
+COPYRIGHT FORMAT
+--------- --------------------
+08-JUN-04 CD
+
+SQL> [KSQL> [KSQL> @A3Q2b.sqla.sql[C[C[C[C[C[6Pexit@A3Q2e.sqld.sqlc.sql[C[C[C[C[C[K@A3Q2c.sql
+
+STITLE			       AUTHOR			 ATITLE
+------------------------------ ------------------------- --------------------
+COPYRIGHT   COUNT(*)
+--------- ----------
+Love Sosa		       Chief Keef		 Revival
+09-SEP-09	   1
+
+Ball For Me		       Post Malone		 Welcome
+03-APR-14	   1
+
+Hello World		       21 Savage		 Recovery
+08-JUN-04	   2
+
+
+SQL> [KSQL> [KSQL> @A3Q2c.sqlb.sqla.sql[C[C[C[C[C[6Pexit@A3Q2e.sqld.sql[C[C[C[C[C[K@A3Q2d.sql
+[K
+STITLE			       MNAME		    ATITLE
+------------------------------ -------------------- --------------------
+Hello World		       Majid Peters	    Recovery
+Love Sosa		       Steven Markel	    Revival
+Ball For Me		       Melanie Good	    Welcome
+Hello World		       Melanie Good	    Recovery
+
+SQL> [KSQL> [KSQL> @A3Q2d.sqlc.sqlb.sqla.sql[C[C[C[C[C[6Pexit@A3Q2e.sql[C[C[C[C[C[K@A3Q2e.sql
+
+INAME		     MUSICKEY	     MNAME
+-------------------- --------------- --------------------
+Flute		     C-Flat	     Majid Peters
+Drums		     B-Minor	     Majid Peters
+Trumpet 	     E-Flat	     Steven Markel
+
+SQL> [KSQL> [KSQL> exit[Kexit
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+]0;sarsonk@charlie: ~[01;32msarsonk@charlie[00m:[01;34m~[00m$ exit
+exit
+
+Script done on Sun 10 Mar 2019 09:45:39 PM EDT

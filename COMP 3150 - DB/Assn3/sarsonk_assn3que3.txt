@@ -1,0 +1,51 @@
+Script started on Sun 10 Mar 2019 09:52:32 PM EDT
+]0;sarsonk@charlie: ~[01;32msarsonk@charlie[00m:[01;34m~[00m$ exitsqlplus sarsonk
+[K
+SQL*Plus: Release 12.1.0.2.0 Production on Sun Mar 10 21:52:34 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter password: [KEnter password: [K[KEnter password: [KEnter password: *[KEnter password: **[KEnter password: ***[KEnter password: ****[KEnter password: *****[KEnter password: ******[KEnter password: *******[KEnter password: ********[KEnter password: *******[KEnter password: ********[KEnter password: *********[KEnter password: **********[KEnter password: ***********[KEnter password: ***********[KEnter password: 
+[K
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> [KSQL> [KSQL> INSER[K[K[K[K[Kinsert into musicial[Kn v[K[K[C[C[C[C[C[Kinsert into musician
+  2  [K  2  [K  2  values()[C[C;5);5);5);5);5);5);5);5);5);,); );');T);i);n);t);i);n); );A);r);i);a);l);');,); );');4);0);1); );S);u);n);s);e);t); );A);v);e);');,); );5);1);9);2);3);1);1);0);1);0);[C[C[C[C[C[Kvalues(555555555, 'Tintin Arial', '401 Sunset Ave', 5192311010);
+
+1 row created.
+
+SQL> [KSQL> [KSQL> Update Musu[Kician[C[C[C[C[C[KUpdate Musician
+  2  [K  2  [K  2  Set Maddr = '5000[K Airport Rd'[C[C[C[C[C[KSet Maddr = '500 Airport Rd'
+  3  [K  3  [K  3  Where MName = 'John Doe';[C[C[C[C[C[KWhere MName = 'John Doe';
+
+1 row updated.
+
+SQL> [KSQL> [KSQL> Where MName = 'John Doe';[C[C[C[C[CSet Maddr = '500 Airport Rd'[C[C[C[C[C[13PUpdate Musician[C[C[C[C[Cvalues(555555555, 'Tintin Arial', '401 Sunset Ave', 5192311010);[C[C[C[C[Cinsert into musician[K[K[K[K[K[K[K[K[Kalbum[C[C[C[C[C[Kinsert into album
+  2  [K  2  [K  2  insert into album[C[C[C[C[C[Kvalues()[C[C;4);4);4); );');G);o);o);d); );H);e);a);r);t);');,); );1);4);-);F);e);b);-);1);7);');'14-Feb-17');[C[C[C[C[C[C[C[C[C[C,); );C);D);');'CD');[C[C[C[C[C[Kvalues(444 'Good Heart', '14-Feb-17', 'CD');
+values(444 'Good Heart', '14-Feb-17', 'CD')
+           *
+ERROR at line 2:
+ORA-00917: missing comma
+
+
+SQL> [KSQL> [KSQL> values(444 'Good Heart', '14-Feb-17', 'CD');[C[C[C[C[C[27Pinsert into album[C[C[C[C[Cvalues(444 'Good Heart', '14-Feb-17', 'CD');[1@,[C[C[C[C[C[Kvalues(444, 'Good Heart', '14-Feb-17', 'CD');
+SP2-0734: unknown command beginning "values(444..." - rest of line ignored.
+SQL> [KSQL> [KSQL> values(444, 'Good Heart', '14-Feb-17', 'CD');[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[27Pinsert into album[C[C[C[C[C[Kinsert into album
+  2  [K  2  [K  2  insert into album[C[C[C[C[Cvalues(444, 'Good Heart', '14-Feb-17', 'CD');[C[C[C[C[C[Kvalues(444, 'Good Heart', '14-Feb-17', 'CD');
+
+1 row created.
+
+SQL> [KSQL> [KSQL> Delete Form[K[K[Krom Performs[C[C[C[C[C[KDelete From Performs
+  2  [K  2  [K  2  Where Stitle = 'Hello World';[C[C[C[C[C[KWhere Stitle = 'Hello World';
+
+2 rows deleted.
+
+SQL> [KSQL> [KSQL> exit[Kexit
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+]0;sarsonk@charlie: ~[01;32msarsonk@charlie[00m:[01;34m~[00m$ exit
+exit
+
+Script done on Sun 10 Mar 2019 09:55:38 PM EDT

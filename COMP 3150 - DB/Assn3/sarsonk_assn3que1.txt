@@ -1,0 +1,216 @@
+Script started on Sun 10 Mar 2019 09:33:16 PM EDT
+]0;sarsonk@charlie: ~[01;32msarsonk@charlie[00m:[01;34m~[00m$ exitsqlplus sarsonk
+
+SQL*Plus: Release 12.1.0.2.0 Production on Sun Mar 10 21:33:18 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter password: [KEnter password: [K[KEnter password: [KEnter password: *[KEnter password: **[KEnter password: ***[KEnter password: ****[KEnter password: *****[KEnter password: ******[KEnter password: *******[KEnter password: ********[KEnter password: *********[KEnter password: **********[KEnter password: ***********[KEnter password: ***********[KEnter password: 
+[K
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> [KSQL> [KSQL> exit@sarsonk_musicDropTable.sql[C[C[C[C[Cexit[K@sarsonk_musicData.sqlSchema.sql[C[C[C[C[Csarsonk[K[C[C[C[C[C@sarsonk_musicSchema.sql[C[C[C[C[C[K@sarsonk_musicSchema.sql
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Commit complete.
+
+SQL> [KSQL> [KSQL> @sarsonk_musicSchema.sql[C[C[C[C[Cexit[K@sarsonk_musicDropTable.sql[C[C[C[C[Cexit[K@sarsonk_musicData.sql[C[C[C[C[C[K@sarsonk_musicData.sql
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+SQL> [KSQL> [KSQL> @sarsonk_musicData.sqlSchema.sql[C[C[C[C[Cexit[K@sarsonk_musicDropTable.sql[C[C[C[C[Cexit[K@sarsonk_musicData.sqlSchema.sql[C[C[C[C[Csarsonk[K[C[C[C[C[C[3Pexitcommit;[C[C[C[C[Cdrop table musician;instrument;[5Palbum;[1Psong;play;contains;performs;roduces;[C[C[C[C[C;[Kcommitdelete from album;instrument;[6Psong;musician;[4Pplay;roduces;erforms;contains;[C[C[C[C[CSelect * From Produces;erforms;Contains;[4PPlay;Song;Album;Instrument;urment;[2PMusician;[C[C[C[C[CCommit;[K[C[C[C[C[CValues('333', 333333333);[C[C[C[C[C[5PINSERT INTO Produces[C[C[C[C[CValues('333', 333333333);[C[C[C[C[CCommit;[K[C[C[C[C[CSelect * From Musician;[C[C[C[C[C[KSelect * From Musician;
+
+       SSN MNAME		MADDR			  PHONE
+---------- -------------------- -------------------- ----------
+ 111111111 Majid Peters 	4747 Oakwood Dr      1113331112
+ 222222222 Steven Markel	1231 Berry Ave	     2221113332
+ 333333333 Melanie Good 	423 Walker Rd	     1231235555
+ 444444444 John Doe		5431 Hefty Lane      6751231231
+
+SQL> [KSQL> [KSQL> Select * From Musician;[C[C[C[C[C[1P@sarsonk_musicData.sql[C[C[C[C[CSelect * From Musician;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;I;n;s;t;u;r;m;[1P;[1P;[1P;r;u;m;e;n;t;[C[C[C[C[C[KSelect * From Instrument;
+
+INAME		     MUSICKEY
+-------------------- ---------------
+Flute		     C-Flat
+Trumpet 	     E-Flat
+Guitar		     A-Minor
+Drums		     B-Minor
+
+SQL> [KSQL> [KSQL> Select * From Instrument;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;A;l;b;u;m;[C[C[C[C[C[KSelect * From Album;
+
+AID		ATITLE		     COPYRIGHT FORMAT
+--------------- -------------------- --------- --------------------
+111		Recovery	     08-JUN-04 CD
+222		Revival 	     09-SEP-09 CD
+333		Welcome 	     03-APR-14 CD
+
+SQL> [KSQL> [KSQL> Select * From Album;[1P;[1P;[1P;[1P;[1P;S;o;n;g;[C[C[C[C[C[KSelect * From Song;
+
+STITLE			       AUTHOR
+------------------------------ -------------------------
+Hello World		       21 Savage
+Happy All		       21 Savage
+Love Sosa		       Chief Keef
+Ball For Me		       Post Malone
+
+SQL> [KSQL> [KSQL> Select * From Song;[1P;[1P;[1P;[1P;[1P; ;P;l;a;y;[C[C[C[C[C[KSelect * From Play;
+
+       SSN INAME
+---------- --------------------
+ 111111111 Drums
+ 111111111 Flute
+ 111111111 Guitar
+ 222222222 Trumpet
+ 333333333 Guitar
+
+SQL> [KSQL> [KSQL> Select * From Play;[1P;[1P;[1P;[1P;C;o;n;t;a;i;n;s;[C[C[C[C[C[KSelect * From Contains;
+
+AID		STITLE
+--------------- ------------------------------
+111		Happy All
+111		Hello World
+222		Love Sosa
+333		Ball For Me
+
+SQL> [KSQL> [KSQL> Select * From Contains;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;P;e;r;f;o;r;m;s;[C[C[C[C[C[KSelect * From Performs;
+
+       SSN STITLE
+---------- ------------------------------
+ 111111111 Hello World
+ 222222222 Love Sosa
+ 333333333 Ball For Me
+ 333333333 Hello World
+
+SQL> [KSQL> [KSQL> Select * From Performs;Produces[C;[1PProduces;[1PProduces;[1PProduces;[1PProduces;[1PProduces;[1PProduces;[1PProduces;[1PProduces;[1Produces;[C[C[C[C[C[KSelect * From Produces;
+
+       SSN AID
+---------- ---------------
+ 111111111 111
+ 222222222 222
+ 333333333 333
+
+SQL> [KSQL> [KSQL> exit[Kexit
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+]0;sarsonk@charlie: ~[01;32msarsonk@charlie[00m:[01;34m~[00m$ exit
+exit
+
+Script done on Sun 10 Mar 2019 09:35:44 PM EDT
