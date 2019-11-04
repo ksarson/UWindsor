@@ -1,0 +1,28 @@
+1.	
+	i)
+		(a) Yes, guarantees mutual exclusion; only the thread with tid matching turn is able to acquire the lock. 
+		(b) No, does not guarantee progress; if thread 0 never tries to acquire the lock (it is executing other code), thread 1 will not be able to acquire the lock.
+		(c) Limitations: Not needed.
+
+	ii)
+		(a) Yes, guarantees mutual exclusion; only one tid can hold the lock (be true) at a time, in cooperation with turn=1 (true).
+		(b) Yes, guarantees progress; the first thread can acquire the lock without issue from which the lock/unlock pattern can begin.
+		(c) Limitations: Only works for two threads and uses busy waiting.
+
+
+	iii)
+		(a) Yes, guarantees mutual exclusion on a uniprocessor, but not on a multiprocessor. On a uniprocessor, once the timer interrupt is disabled, the scheduler won’t be able to 
+		switch to another process (assuming the scheduled process doesn’t voluntarily relinquish the CPU). However, on a multiprocessor, it is possible for the other CPU to be running 
+		a process that also acquires the lock. 
+		(b) Yes, guarantees progress; once a process is scheduled, it is able to acquire the lock without incident.
+		(c) Limitations: Only works on uniprocessors; allows user processes to disable interrupts for an arbitrary long period; cannot service other important interrupts during 
+		critical section (e.g., I/O); cannot schedule any other processes when lock is held, even those not contending for the lock.
+
+	iv)
+		(a) Yes, guarantees mutual exclusion; it is not possible for more than one process to acquire the lock.
+		(b) No, does not guarantee progress; no process is able to acquire the lock, since it is initialized to true, designating that the lock is already acquired.
+		(c) Limitations: Not needed.
+
+3. The signal( ) operations associated with monitors are not persistent. If a signal is performed and if there are no waiting threads, then the signal is simply ignored and the system 
+does not remember the fact that the signal took place. If a subsequent wait operation is performed, then the corresponding thread simply blocks. Whereas in semaphores, every signal 
+results in a corresponding increment of the semaphore value even if there are no waiting threads. A future wait operation would immediately succeed because of the earlier increment.
