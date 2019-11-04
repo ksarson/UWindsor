@@ -1,0 +1,9 @@
+jflex A5_104232327_JF.flex
+java -jar java-cup-11b.jar -interface -parser A5_104232327_Parser -symbols A5_104232327_Symbol A5_104232327_JC.cup
+javac -cp java-cup-11b-runtime.jar A5_104232327_Scanner.java A5_104232327_Parser.java  A5_104232327_Symbol.java Main2.java
+java -cp .;java-cup-11b-runtime.jar Main A51_input.c
+java -cp .;java-cup-11b-runtime.jar Main A52_input.c
+java -cp .;java-cup-11b-runtime.jar Main A53_input.c
+java -cp .;java-cup-11b-runtime.jar Main A54_input.c
+java -cp .;java-cup-11b-runtime.jar Main A55_input.c
+java -cp .;java-cup-11b-runtime.jar Main A56_input.c

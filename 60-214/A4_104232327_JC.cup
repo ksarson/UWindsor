@@ -1,0 +1,102 @@
+import java_cup.runtime.*;
+import java.io.*;
+
+//Declare the terminals, which cannot be changed
+terminal NUMBER;
+terminal VOID, INT, RETURN, MAIN, PLUS, MINUS, SEMI, COMMA, LPAR, RPAR, LBRA, RBRA, EQUAL, PRINTF, HASH, ID, QUOTES, COMMENTS, INLINECOMMENTS, MULT, LESS, GREATER, IF, FOR;
+
+//Declare the non-terminals, which can be changed
+non terminal Integer program;
+non terminal type, ifStmt, forLoop, methodDecl, formalParams, formalParam, block, statement, localVarDecl, assignStmt, returnStmt, expression, multiplicativeExpr, primaryExpr, actualParams, printStmt;
+
+//Set the precedence order
+precedence nonassoc  MULT, PLUS, MINUS, INT, RETURN, ID, LPAR, LBRA, VOID, PRINTF, IF, FOR;
+
+/*
+Create the productions of the form
+name := c code {:RESULT = java code:}
+used to convert c code to java code
+*/
+
+program ::=methodDecl program:e {: RESULT =e+1; :}
+        |methodDecl {: RESULT = 1; :}
+        ;
+
+type ::=INT|VOID;
+
+ifStmt ::= IF LPAR ID GREATER ID RPAR block
+        |IF LPAR ID LESS ID RPAR block
+        |IF LPAR ID RPAR block
+        ;
+
+forLoop ::= FOR LPAR ID EQUAL NUMBER SEMI ID LESS NUMBER SEMI ID PLUS PLUS RPAR statement
+        ;
+1
+
+methodDecl ::= type MAIN LPAR RPAR block
+        |type MAIN LPAR formalParams RPAR block
+        |type MAIN ID LPAR RPAR block
+        |type ID LPAR RPAR block
+        |type MAIN ID LPAR formalParams RPAR block
+        |type ID LPAR formalParams RPAR block
+	    ;
+
+formalParams ::=formalParam COMMA formalParams
+        |formalParam
+        ;
+
+formalParam ::= type ID
+        |type
+        ;
+
+block ::= LBRA statement RBRA
+       ;
+
+statement ::=statement statement
+        |block
+        |localVarDecl
+        |assignStmt
+        |returnStmt
+        |printStmt
+        |ifStmt
+        |forLoop
+        ;
+
+localVarDecl ::= type ID SEMI
+        |type ID COMMA localVarDecl
+        |type assignStmt
+        |ID SEMI
+        |ID COMMA localVarDecl
+        ;
+
+assignStmt ::= ID EQUAL expression SEMI
+        |ID EQUAL expression COMMA assignStmt
+        ;
+
+returnStmt ::= RETURN expression SEMI
+        ;
+
+printStmt ::= PRINTF LPAR QUOTES COMMA ID RPAR SEMI
+        |PRINTF LPAR QUOTES COMMA ID COMMA ID MULT ID RPAR SEMI
+        ;
+
+expression ::= multiplicativeExpr
+        |multiplicativeExpr MULT expression
+        |multiplicativeExpr PLUS expression
+        |multiplicativeExpr MINUS expression
+        ;
+
+multiplicativeExpr ::= primaryExpr
+        ;
+
+primaryExpr ::= ID LPAR actualParams RPAR
+        |LPAR expression RPAR
+        |ID LPAR RPAR
+        |QUOTES
+        |NUMBER
+        |ID
+        ;
+
+actualParams ::=expression COMMA actualParams
+        |expression
+        ;

@@ -1,0 +1,5 @@
+Identifiers: 3
+Keywords: 5
+Numbers: 4
+Comments: 2
+Strings: 1

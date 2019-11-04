@@ -1,0 +1,120 @@
+import java_cup.runtime.*;
+import java.io.*;
+
+terminal String NUMBER, VOID, INT, RETURN, MAIN, PLUS,  MINUS, SEMI, COMMA, LPAR, RPAR, LBRA, RBRA, EQUAL, PRINTF, HASH, ID, QUOTES, COMMENTS, INLINECOMMENTS, QString, MULT, GTHAN, LTHAN, FOR, PLUSPLUS, IF, ELSE, WHILE, DO, COLON, CASE, SWITCH, DEFAULT, RETURNBOI;
+
+non terminal String program, type, methodDecl, formalParams, formalParam,forLoop, block, statement, statements, localVarDecl, assignStmt, returnStmt, expression, multiplicativeExpr, primaryExpr, actualParams, printStmt, full, ifStmt, whileLoop, switchStmt, default, case;
+
+precedence nonassoc  MULT, PLUS, MINUS, INT, RETURN, ID, LPAR, LBRA, VOID, PRINTF, FOR;
+
+full::= program:e {: RESULT = ("public class A5_output {\n"+e+"\n}"); :};
+
+switchStmt ::= SWITCH LPAR expression:e RPAR block:b {: RESULT=("switch("+e+")"+b);:}
+        ;
+
+forLoop ::= FOR LPAR assignStmt:a expression:e SEMI expression:h RPAR statement:s {: RESULT=("for ("+a+e+";"+h+")\n"+s);:}
+        ;
+        
+default ::= DEFAULT COLON {: RESULT= ("default: "); :}
+        ;
+        
+case ::= CASE expression:e COLON {: RESULT= ("case "+e+":"); :}
+        ;
+
+whileLoop ::= WHILE LPAR expression:e RPAR block:b {: RESULT=("while ("+e+")"+b);:}
+        |DO block:b WHILE LPAR expression:e RPAR SEMI {: RESULT=("do"+b+"while("+e+");");:}
+        ;       
+
+ifStmt ::= IF LPAR expression:e RPAR block:b {: RESULT= ("if("+e+")"+b);:}
+        |IF LPAR expression:e RPAR block:b ELSE block:bl {: RESULT= ("if("+e+")"+b+"else"+bl);:}
+        ;
+        
+program ::=methodDecl:e program:e2
+        {: RESULT= e+ "\n" + e2;:}
+        |methodDecl:e {: RESULT= e;:}
+        ;
+
+type ::=INT {: RESULT= ("int "); :}
+        |VOID;
+
+methodDecl ::= type MAIN LPAR RPAR block
+        |type MAIN LPAR formalParams RPAR block:b {: RESULT= ("\tpublic static void main(String [] args)\n" + b); :}
+        |type MAIN ID LPAR RPAR block:b {: RESULT= ("public static void main(String [] args)\n" + b); :}
+        |type ID LPAR RPAR block
+        |type MAIN ID LPAR formalParams RPAR block:b {: RESULT= ("public static void main(String [] args)\n" + b); :}
+        |type:t ID:i LPAR formalParams:fp RPAR block:b {: RESULT= ("static "+t+" "+i+"("+fp+")\n" + b); :}
+        ;
+
+formalParams ::=formalParam:fp COMMA formalParams:fps {: RESULT= (fp +", "+fps); :}
+        |formalParam:fp {: RESULT= (fp); :}
+        ;
+
+formalParam ::= type:t ID:i {: RESULT= (t +" "+i); :}
+        |type
+        ;
+
+block ::= LBRA statements:sts RBRA {: RESULT= ("{\n"+ sts+"\n}"); :}
+       ;
+
+statements::= statement:s {: RESULT= (s); :}
+        | statement:s statements:sts {: RESULT= (s + " " + sts); :}
+        ;
+
+statement ::= block:b {: RESULT= (b+"\n"); :}
+        |localVarDecl:e {: RESULT= (e+"\n"); :}
+        |assignStmt:e {:RESULT= (e+"\n");:}
+        |returnStmt:e {:RESULT= (e);:}
+        |printStmt:e {:RESULT= (e+"\n");:}
+        |forLoop:e {:RESULT= (e+"\n");:}
+        |ifStmt:e {:RESULT= (e+"\n");:}
+        |whileLoop:e {:RESULT= (e+"\n");:}
+        |expression:e SEMI {:RESULT= (e+"\n");:}
+        |switchStmt:e {:RESULT= (e+"\n");:}
+        |case:e {:RESULT= (e+"\n");:}
+        |default:e {:RESULT= (e+"\n");:}
+        ;
+
+localVarDecl ::= type:t ID:i SEMI {: RESULT= (t + " " + i+ ";"); :}
+        |type:t ID:i COMMA localVarDecl:lv {: RESULT= (t + " " + i+ ", " +lv); :}
+        |type:t assignStmt:a {:RESULT= (t + " " + a);:}
+        |ID SEMI
+        |ID COMMA localVarDecl
+        ;
+
+assignStmt ::= ID:i EQUAL expression:e SEMI {: RESULT= (i+" = "+e+";"); :}
+        |ID:i EQUAL expression:e COMMA assignStmt:as {: RESULT= (i+" = "+e+", " +as); :}
+        ;
+
+returnStmt ::= RETURN expression:e SEMI {:RESULT= ("return "+e+";");:}
+        |RETURNBOI {:RESULT= ("");:}
+        ;
+
+printStmt ::= PRINTF LPAR QUOTES:q COMMA expression:m RPAR SEMI {: RESULT= ("System.out.printf("+q+","+m+");"); :}
+        |PRINTF LPAR QUOTES:q COMMA expression:m COMMA expression:n RPAR SEMI {: RESULT= ("System.out.printf("+q+","+m+","+n+");"); :}
+        |PRINTF LPAR QUOTES:q RPAR SEMI {: RESULT= ("System.out.printf("+q+");"); :}
+        ;
+
+expression ::= multiplicativeExpr:me {:RESULT= (me);:}
+        |multiplicativeExpr:me MULT expression:e {:RESULT= (me+"*"+e);:}
+        |multiplicativeExpr:me PLUS expression:e {:RESULT= (me+"+"+e);:}
+        |multiplicativeExpr:me MINUS expression:e {:RESULT= (me+"-"+e);:}
+        |multiplicativeExpr:me LTHAN expression:e {:RESULT= (me+"<"+e);:}
+        |multiplicativeExpr:me GTHAN expression:e {:RESULT= (me+">"+e);:}
+        |ID:i PLUSPLUS {:RESULT=(i+"++");:}
+        ;
+
+multiplicativeExpr ::= primaryExpr:pe1 {:RESULT= (pe1);:}
+        ;
+
+primaryExpr ::= ID:i LPAR actualParams:a RPAR {:RESULT=(i+"("+a+")");:}
+        |LPAR expression:e RPAR {:RESULT= ("("+e+")");:}
+        |ID:i LPAR RPAR {:RESULT= (i+"()");:}
+        |QUOTES
+        |NUMBER:n {: RESULT= (n); :}
+        |ID:i {: RESULT= (i); :} 
+        |ID:i LPAR ID:a COMMA ID:b RPAR SEMI {:RESULT= (i+"("+a+","+b+");");:}
+        ;
+
+actualParams ::=expression:e COMMA actualParams:ap {:RESULT= (e +", " +ap);:}
+        |expression:e {:RESULT= (e);:}
+        ;

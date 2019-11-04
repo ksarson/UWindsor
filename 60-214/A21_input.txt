@@ -1,0 +1,9 @@
+num, num1, num_1,,,,,,;;;;
+
+if, else; do   while,, for
+
+234, 345.56, 0.000000000000000000000000011, 1.504582E+02
+
+/*This is nothing but a sample input file created for assignment-2 and yes this is a block comment*/ // this is an inline comment
+
+"Yes, this is a string literal"
