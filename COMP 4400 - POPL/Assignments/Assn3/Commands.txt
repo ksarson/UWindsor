@@ -1,0 +1,9 @@
+cd OneDrive\Documents\Windsor\COMP 4400 - POPL\Assignments\Assn3
+
+javac -classpath tiny.jar;C:\aspectj1.9\lib\aspectjrt.jar *.java
+
+java -classpath .;tiny.jar;C:\aspectj1.9\lib\aspectjrt.jar UseParser
+
+ajc -1.5 -inpath tiny.jar -cp C:\aspectj1.9\lib\aspectjrt.jar *.java A2.aj
+
+java -classpath .;tiny.jar;C:\aspectj1.9\lib\aspectjrt.jar UseParser
