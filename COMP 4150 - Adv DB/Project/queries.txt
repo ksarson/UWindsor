@@ -1,0 +1,44 @@
+--1
+--Select all of the courses that a certain student is taking
+
+--2
+--Select all of the courses that a certain professor is teaching
+
+--3
+--Select all of the courses where a student gets an A
+
+--4 
+--Select all students taking a specific course
+
+--5
+--Select the room that a course is being taught in
+
+--6 
+--Select all students currently taking a course with a certain professor
+
+--7 
+--Select the department names of all students
+
+--8
+--Select all courses are offered by a department
+
+--9
+--Select all students on the honour roll
+
+--10
+--Update grades to add a 5% curve to the grades of all students in a certain section of a course
+
+--11
+--Delete a student from a course who voluntarily dropped it online
+
+--12
+--Update a student’s major
+
+--13
+--Update a student’s section of a course
+
+--14
+--Update the professor who is teaching a course section
+
+--15
+--Calculate the average of a course section
